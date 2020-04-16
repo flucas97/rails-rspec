@@ -26,5 +26,10 @@ RSpec.describe Customer, :customer, type: :model do
     expect(customer.email).to eq(Customer.last.email)
   end
 
+  it 'Upcase name' do
+    customer = create(:customer, upcased: true)
+    expect(customer.name.upcase).to eq(customer.name)
+  end
+
   it { expect{ create(:customer) }.to change{Customer.all.size}.by(1) }
 end
