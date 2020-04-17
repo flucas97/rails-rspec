@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe Customer, :customer, type: :model do
   let(:customer) { create(:customer) }
   let(:customer_vip) { create(:customer_vip) }  
-  let(:customer_days_to_pay) { create(:customer_days_to_pay) }
+  let(:days_to_pay) { create(:days_to_pay) }
 
   it 'Vip true' do
     expect(customer_vip.vip).to be true
@@ -15,7 +15,7 @@ RSpec.describe Customer, :customer, type: :model do
   end
 
   it 'Days to pay' do
-    expect(customer_days_to_pay.days_to_pay).to eq(10)
+    expect(days_to_pay.days_to_pay).to eq(10)
   end
 
   it 'Name Test' do

@@ -6,14 +6,20 @@ FactoryBot.define do
         name Faker::Name.name
         email Faker::Internet.email
         # heranças
-        factory :customer_vip do 
+        trait :vip do 
             vip true
         end
 
-        factory :customer_days_to_pay do 
+        trait :days_to_pay do 
             days_to_pay 10
         end
 
+        trait :not_vip do 
+            vip false
+        end
+        factory :customer_vip, traits: [:vip]
+        factory :customer_not_vip, traits: [:not_vip]
+        factory :days_to_pay, traits: [:days_to_pay]
         after(:create) do |customer, evaluator|
             customer.name.upcase! if evaluator.upcased
         end
