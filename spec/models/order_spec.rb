@@ -1,5 +1,9 @@
 require 'rails_helper'
 
-RSpec.describe Order, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+RSpec.describe Order, :order, type: :model do
+    it "Add one item" do
+      order = create(:order)
+      p order.description
+      expect(order.customer).to be_kind_of(Customer)  
+    end
 end

@@ -1,22 +1,22 @@
 FactoryBot.define do 
     factory :customer do
         transient do
-            upcased false
+            upcased { false }
         end
 
         name { Faker::Name.name }
         email { Faker::Internet.email }
 
         trait :vip do 
-            vip true
+            vip { true }
         end
 
         trait :days_to_pay do 
-            days_to_pay 10
+            days_to_pay { 10 }
         end
 
         trait :not_vip do 
-            vip false
+            vip { false }
         end
 
         factory :customer_vip, traits: [:vip]
