@@ -5,6 +5,7 @@ FactoryBot.define do
             qtde_orders { 3 } 
         end
 
+        address { Faker::Address.street_address }
         name { Faker::Name.name }
         email { Faker::Internet.email }
 
