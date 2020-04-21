@@ -44,6 +44,7 @@ group :development, :test do
   gem 'faker'
   gem 'httparty'
   gem 'webmock'
+  gem 'vcr'
   gem 'capybara'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
