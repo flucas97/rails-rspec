@@ -26,6 +26,8 @@ end
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
+  #time helpers
+  config.include ActiveSupport::Testing::TimeHelpers
 
   # Factory Bot Lint
   config.before(:suite) do 
