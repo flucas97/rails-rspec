@@ -1,12 +1,13 @@
 require 'rails_helper'
 
-RSpec.describe CustomersController, type: :controller do
+RSpec.describe CustomersController, :customer_controller, type: :controller do
 
   # This should return the minimal set of attributes required to create a valid
   # Customer. As you add validations to Customer, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) {
     skip("Add a hash of attributes valid for your model")
+
   }
 
   let(:invalid_attributes) {

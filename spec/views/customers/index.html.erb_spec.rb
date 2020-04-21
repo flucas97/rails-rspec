@@ -5,11 +5,13 @@ RSpec.describe "customers/index", type: :view do
     assign(:customers, [
       Customer.create!(
         :name => "Name",
-        :email => "Email"
+        :email => "Email",
+        :address => "Address"
       ),
       Customer.create!(
         :name => "Name",
-        :email => "Email"
+        :email => "Email",
+        :address => "Address"
       )
     ])
   end
