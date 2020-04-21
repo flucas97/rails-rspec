@@ -17,7 +17,12 @@ RSpec.describe Customer, :customer, type: :model do
   it 'Days to pay' do
     expect(days_to_pay.days_to_pay).to eq(10)
   end
-
+  it 'Travel to' do
+    travel_to Time.zone.local(1997, 07, 19, 01, 04, 44) do 
+      @customer_travel = create(:customer)
+    end
+    expect(@customer_travel.created_at).to eq(Time.zone.local(1997, 07, 19, 01, 04, 44))
+  end
   it 'Name Test' do
     expect(customer.name).to eq(Customer.last.name)
   end
