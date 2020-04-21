@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://jsonplaceholder.typicode.com/posts
+    uri: "<API-URL>/posts"
     body:
       encoding: US-ASCII
       string: ''
@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 21 Apr 2020 01:04:41 GMT
+      - Tue, 21 Apr 2020 01:08:32 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -27,8 +27,8 @@ http_interactions:
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=d7ce7d398596b36a7ce01793aae867edd1587431081; expires=Thu, 21-May-20
-        01:04:41 GMT; path=/; domain=.typicode.com; HttpOnly; SameSite=Lax
+      - __cfduid=d6289344d96e29de5cc0b5919cf5e91551587431312; expires=Thu, 21-May-20
+        01:08:32 GMT; path=/; domain=.typicode.com; HttpOnly; SameSite=Lax
       X-Powered-By:
       - Express
       Vary:
@@ -50,15 +50,15 @@ http_interactions:
       Cf-Cache-Status:
       - HIT
       Age:
-      - '5610'
+      - '5841'
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       Server:
       - cloudflare
       Cf-Ray:
-      - 58733141aaf4f62f-GRU
+      - 587336e70f7a4a94-GRU
       Cf-Request-Id:
-      - 023bdd1d080000f62fe4ae9200000001
+      - 023be0a46700004a94221d1200000001
     body:
       encoding: ASCII-8BIT
       string: |-
@@ -665,5 +665,5 @@ http_interactions:
           }
         ]
     http_version: null
-  recorded_at: Tue, 21 Apr 2020 01:04:41 GMT
+  recorded_at: Tue, 21 Apr 2020 01:08:32 GMT
 recorded_with: VCR 5.1.0
