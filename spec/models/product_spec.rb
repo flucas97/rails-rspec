@@ -5,23 +5,12 @@ RSpec.describe Product, :product, type: :model do
     product = create(:product)
     expect(product).to be_valid 
   end
-  it 'is invalid without description' do
-    product = build(:product, description: nil)
-    product.valid?
-    expect(product.errors[:description]).to include("can't be blank")  
-  end
 
-  it 'is invalid without price' do
-    product = build(:product, price: nil)
-    product.valid?
-    expect(product.errors[:price]).to include("can't be blank")  
-  end
+  it { is_expected.to validate_presence_of(:description) }
 
-  it 'is invalid without category' do
-    product = build(:product, category: nil)
-    product.valid?
-    expect(product.errors[:category]).to include("can't be blank")  
-  end
+  it { is_expected.to validate_presence_of(:price) }
+
+  it { is_expected.to validate_presence_of(:category) }
 
   it 'full description' do
     product = create(:product)
