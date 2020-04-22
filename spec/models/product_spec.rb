@@ -14,7 +14,6 @@ RSpec.describe Product, :product, type: :model do
   it 'is invalid without price' do
     product = build(:product, price: nil)
     product.valid?
-    p " >>>> #{product.errors.inspect}"
     expect(product.errors[:price]).to include("can't be blank")  
   end
 
@@ -22,5 +21,10 @@ RSpec.describe Product, :product, type: :model do
     product = build(:product, category: nil)
     product.valid?
     expect(product.errors[:category]).to include("can't be blank")  
+  end
+
+  it 'full description' do
+    product = create(:product)
+    expect(product.full_description).to eq("#{product.description} -- #{product.price} -- #{product.category}}")  
   end
 end
