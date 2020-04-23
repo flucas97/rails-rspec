@@ -26,7 +26,6 @@ end
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
-  config.include Devise::Test::COntrollerHelpers, :type => :controller
   # Factory Bot Lint
   config.before(:suite) do 
     FactoryBot.lint
