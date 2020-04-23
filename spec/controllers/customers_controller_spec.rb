@@ -21,6 +21,7 @@ RSpec.describe CustomersController, :customer_controller, type: :controller do
       sign_in member
       get :show, params: { id: customer.id }
       expect(response).to have_http_status(200)
+      expect(response).to render_template('show')
     end
   end
 

@@ -42,6 +42,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 group :development, :test do
   gem 'rspec-rails', '~> 3.6'
   gem 'faker'
+  gem 'rails-controller-testing'
   gem 'httparty'
   gem 'webmock'
   gem 'vcr'
