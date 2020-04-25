@@ -1,5 +1,5 @@
 class CustomersController < ApplicationController
-  before_action :authenticate_member!, except: [:index]
+  before_action :authenticate_member!, except: [:index, :show]
   before_action :set_customer, only: [:show, :edit, :update, :destroy]
 
   # GET /customers
@@ -36,7 +36,7 @@ class CustomersController < ApplicationController
         format.json { render json: @customer.errors, status: :unprocessable_entity }
       end
     end
-  end
+  end 
 
   # PATCH/PUT /customers/1
   # PATCH/PUT /customers/1.json

@@ -41,6 +41,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.6'
+  gem 'rspec-json_expectations'
   gem 'faker'
   gem 'rails-controller-testing'
   gem 'httparty'
