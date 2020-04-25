@@ -19,5 +19,15 @@ RSpec.describe "Customers", :customer_request, type: :request do
         email: (be_kind_of String)
       )
     end
+
+    it 'create - JSON' do
+      headers = { "ACCEPT" => "application/json"}
+      member = create(:member)
+      sign_in member
+      customers_params = attributes_for(:customer)
+      post "/customers.json", params: { customer: customers_params}, headers: headers
+      p response.body
+    end
+
   end
 end
