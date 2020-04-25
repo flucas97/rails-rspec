@@ -2,9 +2,11 @@ require 'rails_helper'
 
 RSpec.describe "Customers", :customer_request, type: :request do
   describe "GET /customers" do
-    it "works! (now write some real specs)" do
-      get customers_path
-      expect(response).to have_http_status(200)
+    it "index - JSON 200" do
+      get "/customers.json"
+      expect(response.body).to include_json([
+        id: 1
+      ])
     end
   end
 end
